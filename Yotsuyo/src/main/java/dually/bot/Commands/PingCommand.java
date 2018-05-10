@@ -18,6 +18,7 @@ public class PingCommand extends ListenerAdapter {
 		Message message =event.getMessage();
 		String msg = message.getContentDisplay();
 		MessageChannel channel = event.getChannel();
+		System.out.println("recieved msg");
 		if(event.isFromType(ChannelType.TEXT)) {
 			Guild guild =event.getGuild();
 			TextChannel textchannel = event.getTextChannel();
