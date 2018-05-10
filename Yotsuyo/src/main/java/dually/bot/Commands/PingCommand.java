@@ -15,14 +15,15 @@ public class PingCommand extends ListenerAdapter {
 	void onMessageRecieved(MessageReceivedEvent event) {
 		JDA jda = event.getJDA();
 		User author = event.getAuthor();
-		Message message =event.getMessage().getContentDisplay();
+		Message message =event.getMessage();
+		String msg = message.getContentDisplay();
 		MessageChannel channel = event.getChannel();
 		if(event.isFromType(ChannelType.TEXT)) {
 			Guild guild =event.getGuild();
 			TextChannel textchannel = event.getTextChannel();
-			System.out.println(guild + " " + textchannel + " " + message);
+			System.out.println(guild + " " + textchannel + " " + msg + " " + author);
 		}
-		if(message.equals("!ping")) {
+		if(msg.equals("!ping")) {
 			channel.sendMessage("pong").queue();
 		}
 	}
