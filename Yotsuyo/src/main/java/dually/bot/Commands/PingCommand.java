@@ -12,7 +12,8 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 public class PingCommand extends ListenerAdapter {
 	
-	void onMessageRecieved(MessageReceivedEvent event) {
+	public void onMessageRecieved(MessageReceivedEvent event) {
+		System.out.println(event.getMessage().getContentDisplay());
 		JDA jda = event.getJDA();
 		User author = event.getAuthor();
 		Message message =event.getMessage();
