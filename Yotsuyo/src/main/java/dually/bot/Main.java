@@ -12,7 +12,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("wtf is goin gon");
-		String token = args[0];
+		String token = "NDQzMjg2NTE1NzU0MzM2MjU4.DdW9JA.MqkZfiOaydaYgziNbd1v33al0Os";
 		try
         {
             JDA jda = new JDABuilder(AccountType.BOT)
