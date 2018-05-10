@@ -7,6 +7,8 @@ import net.dv8tion.jda.core.JDABuilder;
 
 import javax.security.auth.login.LoginException;
 
+import dually.bot.Commands.PingCommand;
+
 
 public class Main {
 
@@ -16,8 +18,10 @@ public class Main {
 		try
         {
             JDA jda = new JDABuilder(AccountType.BOT)
-                    .setToken(token)           //The token of the account that is logging in.
+                    .addEventListener(new PingCommand())
+            		.setToken(token)           //The token of the account that is logging in.
                     .buildBlocking();  //There are 2 ways to login, blocking vs async. Blocking guarantees that JDA will be completely loaded.
+            		
         }
         catch (LoginException e)
         {
@@ -32,6 +36,9 @@ public class Main {
             // you use buildBlocking in a thread that has the possibility of being interrupted (async thread usage and interrupts)
             e.printStackTrace();
         }
+		
+		
+		
 	}
 
 }
