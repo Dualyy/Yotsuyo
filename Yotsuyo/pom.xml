@@ -6,7 +6,7 @@
   <name>Yotsuyo Bot</name>
   <description>simple bot using JDA</description>
 
-<dependencyManagement>
+
 <dependencies>
 
   <dependency>
@@ -21,7 +21,7 @@
     <version>3.6.0_362</version>
 </dependency>
 </dependencies>
-</dependencyManagement>
+
 
 
 <repositories>
