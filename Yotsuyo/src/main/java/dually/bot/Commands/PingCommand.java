@@ -9,7 +9,7 @@ public class PingCommand extends ListenerAdapter {
 	void onMessageRecieved(MessageReceivedEvent event) {
 		
 		MessageChannel channel = event.getChannel();
-		if(event.getMessage().getContentStripped().equalsIgnoreCase("!ping") && !event.getAuthor().isBot()) {
+		if(event.getMessage().getContentDisplay().equalsIgnoreCase("!ping") && !event.getAuthor().isBot()) {
 			channel.sendMessage("pong").queue();
 		}
 	}
